@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  <style>
+    body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background-color: aquamarine;
+    }
+    .birthdaycard{
+        position: relative;
+        width: 250px;
+        height: 350px;
+        cursor: pointer;
+        transform-style: preserve-3d;
+        transform: perspective(2500px);
+        transition: 1s;
+    }
+
+    .birthdaycard:hover{
+        transform: perspective(2500px)
+        rotate(5deg);
+        box-shadow: inset 100px 20px 100px rgba(0,0,0,0.2),
+        0 10px 10px rgba(0,0,0,0.5);
+    }
+    .birthdaycard:hover .cardfront{
+        transform: rotateY(-160deg);
+    }
+    .birthdaycard:hover .happy{
+        visibility: hidden;
+    }
+  .cardfront{
+    position:relative;
+    background-color: white;
+    width: 250px;
+    height: 350px;
+    overflow: hidden;
+    transform-origin: left;
+    box-shadow: inset 100px 20px 100px rgba(0,0,0,0.2),
+    30px 0 50px rgba(0,0,0,0.4) ;transition: 0.6s;
+  }
+  .happy{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    margin: 30px;
+    background-image: linear-gradient(120deg yellow 0%,pink 100%);
+    transition: 0.1s;
+  }
+  .balloons{
+    position: absolute;
+  }
+  .balloons-1,
+  .balloons-2,
+  .balloons-3,
+  .balloons-4{
+    position: absolute;
+    width: 85px;
+    height: 95px;
+    border-radius: 50%;
+  }
+  .balloons-1{
+    background-image:url(./Rose1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    left: -10px;
+    top: 50px;
+  }
+  .balloons-2{
+    background-image: url(./rose1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    left: 60px;
+    top: 20px;
+  }
+  .balloons-3{
+    background-image: url(./rose1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    left: 110px;
+    top: 50px;
+  }
+  .balloons-4{
+   background-image: url(./rose1.jpg);
+   background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    left: 160px;
+    top: 20px;
+  }
+  /*.balloons-1::before,
+  .balloons-2::before,
+  .balloons-3::before,
+  .balloons-4::before{
+    content: "";
+    position:absolute;
+    width: 1px;
+    height: 155px;
+    background-color: rgb(187, 216, 19);
+    top: 95px;
+    left: 45px;
+
+  }*/
+  /*.balloons-1:after,
+  .balloons-2:after,
+  .balloons-3:after,
+  .balloons-4:after{
+    content: "";
+    position:absolute;
+    border-right: 7px solid transparent;
+    border-left: 7px solid transparent;
+    top: 94px;
+    left: 37px;
+  }*/
+  .balloons-1::after{
+    border-bottom: 10px solid rgba(40, 209, 24, 0.5) ;
+
+  }
+  .balloons-2::after{
+    border-bottom: 10px solid rgba(194, 209, 24, 0.5) ;
+
+  }
+  .balloons-3::after{
+    border-bottom: 10px solid rgba(18, 68, 232, 0.5) ;
+
+  }
+  .balloons-4::after{
+    border-bottom: 10px solid rgba(232, 15, 217, 0.5) ;
+
+  }
+ .cardInside{
+  position:absolute;
+  background-color: white;
+  width: 250px;
+  height: 350px;
+  z-index: -1;
+  left:0;
+  top:0;
+  box-shadow: inset 100px 20px 100px rgba(0,0,0,0.2);
+ }
+p{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin: 40px;
+  color:rgb(47, 184, 238)
+}
+.name{
+  position:absolute;
+  left: 100px;
+  top:200px;
+  color: pink;
+}
+.back{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color:rgb(241, 105, 128);
+  text-align: center;
+  margin: 30px;
+  outline-color: gray;
+}
+  </style>
+
+</head>
+
+<body>
+
+    <div class="birthdaycard">
+        <div class="cardfront">
+            <h3 class="happy"> Happy FRIENDSHIP DAY</h3>
+            <div class="balloons">
+                <div class="balloons-1"></div>
+                <div class="balloons-2"></div>
+                <div class="balloons-3"></div>
+                <div class="balloons-4"></div>
+            </div>
+        </div>
+        <div class="cardInside">
+            <h3 class="back">Happy FRIENDSHIP DAY</h3>
+            <p>"Friendship is Like a Raninbow Between two Hearts"</p>
+                <p class="name">Mrunal Joshi</p>
+        </div>
+    </div>
+</body>
+
+</html>
